@@ -1,18 +1,32 @@
+
 package javaprj;
 class Student {
 
-	String hakgwa;
-	int stdnum;
-	
-	void print() {
-		System.out.println("ÇĞ°ú :"+hakgwa);
-		System.out.println("ÇĞ¹ø :"+stdnum);
+	private String hakgwa;
+	private int stdnum;
+		
+	public String getHakgwa(){ 	//get
+		return hakgwa;
 	}
 	
+	public int getstdNum(){ //get
+		return stdnum;
+	}
+	
+	public void setHakgwa(String h){ //set
+		hakgwa = h;
+	}
+	
+	public void setstdNum(int n){	//set
+		stdnum = n;
+	}
+
 	public static void main(String args[]){
 		Student std = new Student();
-		std.hakgwa="ÄÄÇ»ÅÍÁ¤º¸°øÇĞ°ú";
-		std.stdnum=20130672;
-		std.print();
-		}
+		std.setHakgwa("ì»´í“¨í„°ì •ë³´ê³µí•™ê³¼");
+		std.setstdNum(20130672);
+		
+		System.out.println("í•™ê³¼ :"+std.getHakgwa());
+		System.out.println("í•™ë²ˆ :"+std.getstdNum());
 	}
+}
